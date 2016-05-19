@@ -9,10 +9,12 @@
 		<script type="text/javascript" src="https://code.angularjs.org/1.5.5/angular.js"></script>
 		<script type="text/javascript" src="app.js"></script>
 		<div ng-controller="StoreController as store">
-			<h1>{{store.product.name}}</h1>
-			<h2>{{store.product.price}}</h2>
-			<p>{{store.product.description}}</p>
-			<span ng-bind="store.product.description"></span>
+			<div ng-repeat="product in store.products">
+				<h1>{{product.name}}</h1>
+				<h2>{{product.price}}</h2>
+				<p>{{product.description}}</p>
+				<button ng-show="product.canSold">Add Cart</button>
+			</div>
 		</div>
 	</body>
 </html>
