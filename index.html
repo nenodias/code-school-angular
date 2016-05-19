@@ -4,9 +4,15 @@
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	</head>
 	<body>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="https://code.angularjs.org/1.5.5/angular.js"></script>
 		<script type="text/javascript" src="app.js"></script>
-		<p>{{"Hello"+" World" }}</p>
+		<div ng-controller="StoreController as store">
+			<h1>{{store.product.name}}</h1>
+			<h2>{{store.product.price}}</h2>
+			<p>{{store.product.description}}</p>
+			<span ng-bind="store.product.description"></span>
+		</div>
 	</body>
 </html>
